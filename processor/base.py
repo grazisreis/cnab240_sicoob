@@ -13,7 +13,8 @@ class BaseCNAB240:
         self.agencia = '3292'
         self.dv_agencia = '1'
         self.conta = '19777'
-        self.dv_conta = '12'
+        self.dv_conta = '7'
+        self.dv = self.dv_conta
         self.nome_empresa = 'PARISH E ZENANDRO ADVOGADOS'
         self.nome_banco = 'SICOOB'
 
