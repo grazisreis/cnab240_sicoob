@@ -18,7 +18,7 @@ class PaymentForm(QWidget):
         type_layout = QHBoxLayout()
         type_layout.addWidget(QLabel("Tipo de Pagamento:"))
         self.payment_type = QComboBox()
-        self.payment_type.addItems(["TRANSFERENCIA", "TED", "PIX", "TITULO", "TRIBUTO"])
+        self.payment_type.addItems(["TRANSFERÊNCIA", "TED", "PIX", "PAGAMENTO DE TÍTULOS", "PAGAMENTO DE TRIBUTOS"])
         type_layout.addWidget(self.payment_type)
         layout.addLayout(type_layout)
 
@@ -34,8 +34,11 @@ class PaymentForm(QWidget):
         button_layout = QHBoxLayout()
         self.add_btn = QPushButton("Adicionar Pagamento")
         self.gen_btn = QPushButton("Gerar Arquivo .REM")
+        self.ext_btn = QPushButton("Extrair Dados de Planilha")
+        self.edit_btn = QPushButton("Editar Linha")
         button_layout.addWidget(self.add_btn)
         button_layout.addWidget(self.gen_btn)
+        button_layout.addWidget(self.ext_btn)
         layout.addLayout(button_layout)
 
         # Tabela de pagamentos

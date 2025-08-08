@@ -14,17 +14,17 @@ def generate_cnab240(pagamentos):
     registros.append(base.header_arquivo())
 
     # Agrupa por tipo de pagamento
-    tipos = ["TRANSFERENCIA", "TED", "PIX", "TITULO", "TRIBUTO"]
+    tipos = ["TRANSFERÊNCIA", "TED", "PIX", "PAGAMENTO DE TÍTULOS", "PAGAMENTO DE TRIBUTOS"]
     for tipo in tipos:
         grupo = [p for p in pagamentos if p["TipoPagamento"].upper() == tipo]
         if not grupo:
             continue
 
-        if tipo in ["TRANSFERENCIA", "TED", "PIX"]:
+        if tipo in ["TRANSFERÊNCIA", "TED", "PIX"]:
             lote = TransferenciaCNAB().gerar_lote(grupo)
-        elif tipo in ["TITULO"]:
+        elif tipo in ["PAGAMENTO DE TÍTULOS"]:
             lote = PagamentoTituloCNAB().gerar_lote(grupo)
-        elif tipo in ["TRIBUTO"]:
+        elif tipo in ["PAGAMENTO DE TRIBUTOS"]:
             lote = PagamentoTributoCNAB().gerar_lote(grupo)
         else:
             continue

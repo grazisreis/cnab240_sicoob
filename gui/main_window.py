@@ -25,11 +25,11 @@ class MainWindow(QMainWindow):
 
         # Aba de Pagamentos
         self.payment_tab = PaymentForm()
-        tabs.addTab(self.payment_tab, "Gerar Arquivo .REM")
+        tabs.addTab(self.payment_tab, "Gerar .REM")
 
         # Aba de Retornos
         self.retorno_tab = RetornoViewer()
-        tabs.addTab(self.retorno_tab, "Ler Arquivo .RET")
+        tabs.addTab(self.retorno_tab, "Ler .RET")
 
         # Aba de Configuração
         self.config_tab = ConfigWindow()

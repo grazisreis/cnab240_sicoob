@@ -4,7 +4,7 @@ from gui.main_window import MainWindow
 import os
 
 def load_stylesheet():
-    """Carrega o arquivo CSS de estilo"""
+    
     style_path = os.path.join(os.path.dirname(__file__), "assets", "style.css")
     try:
         with open(style_path, "r", encoding='utf-8') as f:
